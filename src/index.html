@@ -23,12 +23,6 @@
         // Configuration of MQTT Wall
         var config = {
 
-          const queryString = window.location.search;
-          console.log(queryString);
-          const urlParams = new URLSearchParams(queryString);
-          const urlMQTT = urlParams.get('url')
-          var totn_string = "ws://";
-
 
 
             // MQTT server to connect (must support websocket protocol)
@@ -37,7 +31,7 @@
                 // Examples for http://test.mosquitto.org/:
                 //   - insecure connection:  "ws://test.mosquitto.org:8080/"
                 //   - secure connection:    "wss://test.mosquitto.org:8081/"
-                uri: totn_string.concat(urlMQTT));
+                uri: "ws://localhost:8080/",
 
                 // User name (optional)
                 //username: "",
