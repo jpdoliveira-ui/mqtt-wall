@@ -25,8 +25,8 @@
         var queryString = window.location.search;
         var urlParams = new URLSearchParams(queryString);
         var brokerURL = urlParams.get('broker')
-        var websocketURL =urlParams.get('wsport')
-        var topic=urlParams.get('topic')
+        var websocketURL = urlParams.get('wsport')
+        var topic = urlParams.get('topic')
 
         var config = {
 
@@ -41,7 +41,7 @@
                 // Examples for http://test.mosquitto.org/:
                 //   - insecure connection:  "ws://test.mosquitto.org:8080/"
                 //   - secure connection:    "wss://test.mosquitto.org:8081/"
-                uri: "ws://"+ brokerURL+":"+websocketURL"/",
+                uri: "ws://"+ brokerURL+":"+websocketURL+"/",
 
                 // User name (optional)
                 //username: "",
