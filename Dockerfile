@@ -6,5 +6,4 @@ RUN npm install -g grunt \
 RUN git clone https://github.com/jpdoliveira-ui/mqtt-wall.git
 WORKDIR mqtt-wall
 RUN npm install
-RUN sed -i 's/\/#/OperationalData\/#/g' ./src/index.html
 CMD ["grunt", "serve"]
