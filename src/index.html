@@ -23,19 +23,21 @@
         // Configuration of MQTT Wall
         var config = {
 
-          const queryString = window.location.search;
-          console.log(queryString);
-          const urlParams = new URLSearchParams(queryString);
-          const broker = urlParams.get('broker')
-          console.log(broker);
 
             // MQTT server to connect (must support websocket protocol)
             server: {
+
+              
+              var queryString = window.location.search;
+              console.log(queryString);
+              var urlParams = new URLSearchParams(queryString);
+              var brokerURL = urlParams.get('broker')
+
                 // Full URI of server (include protocol ws:// or wss:// for secure connection) and path ("/" is required if path is empty)
                 // Examples for http://test.mosquitto.org/:
                 //   - insecure connection:  "ws://test.mosquitto.org:8080/"
                 //   - secure connection:    "wss://test.mosquitto.org:8081/"
-                uri: "ws://localhost:8080/",
+                uri: "ws://"+ brokerURL,
 
                 // User name (optional)
                 //username: "",
