@@ -23,10 +23,10 @@
         // Configuration of MQTT Wall
 
         var queryString = window.location.search;
-        console.log(queryString);
         var urlParams = new URLSearchParams(queryString);
         var brokerURL = urlParams.get('broker')
-        
+        ver websocketURL =urlParams.get('wsport')
+
         var config = {
 
 
@@ -40,7 +40,7 @@
                 // Examples for http://test.mosquitto.org/:
                 //   - insecure connection:  "ws://test.mosquitto.org:8080/"
                 //   - secure connection:    "wss://test.mosquitto.org:8081/"
-                uri: "ws://"+ brokerURL,
+                uri: "ws://"+ brokerURL+":" + websocketURL "/",
 
                 // User name (optional)
                 //username: "",
